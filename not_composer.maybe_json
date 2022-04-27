@@ -1,0 +1,12 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.6",
+        "benhall14/php-calendar": "^1.2",
+        "vlucas/phpdotenv": "^5.4"
+    }
+}

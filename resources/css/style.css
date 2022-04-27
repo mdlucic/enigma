@@ -1,0 +1,328 @@
+@font-face {
+  font-family: lato-regular;
+  src: url(Lato-Regular.ttf);
+}
+
+body {
+  background-color: #000000;
+  font-family: lato-regular;
+  color: #ffffff;
+}
+
+.icon_tray {
+	position: fixed;
+	margin:auto;
+	width: 50%;
+	text-align:center;
+	left: 0;
+	right: 0;
+	bottom: 0.5em;
+}
+
+.search_form {
+  position: fixed;
+  margin: auto;
+  width: 15%;
+  right:7em;
+  bottom:1px;
+
+}
+
+.home_search{
+  text-align: center;
+  margin-top: 5em;
+}
+
+.home_search_box {
+  width:50%;
+  border: solid 2px #fcbc1d;
+  background-color: #f1f0eb;
+}
+
+.search_list {
+  background-color: #3333cc;
+  position: relative;
+  margin: auto;
+  margin-top: 5%;
+  width:50%;
+}
+
+.table_row_search{
+}
+
+#index_chat{
+  border: solid 3px #ffffff;
+  position:fixed;
+  width: calc(35% - 1em);
+  height:calc(50% - 1em);
+  max-height:calc(60% - 5em);
+  max-width: 20em;
+  border: solid 3px white;
+  overflow-y: scroll;
+  bottom:1em;
+  right:11em;
+  margin-bottom: 0.6em;
+}
+
+#index_messages_box{
+  position:fixed;
+  right: 11em;
+  bottom: 0px;
+  margin-bottom: -1em;
+}
+
+#index_friend_list {
+width:10em;
+float:right;
+display:inline-block;
+margin-left:0.5%;
+margin-top: 2em;
+border: solid 1px #ffffff;
+position:fixed;
+bottom: 2px;
+right:1px;
+}
+
+.index_friend {
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  width: 100%;
+  height: 2em;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  display: flex;
+  align-content: center;
+  margin-bottom:-1em;
+border: solid 1px #ffffff;
+}
+
+.index_friend:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+.index_text_message{
+  width:13em;
+}
+
+.index_text_message_submit{
+
+}
+
+.login {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align:center;
+}
+
+.main_space {
+height: 90%;
+width : 90%;
+background-color: #192332;
+position: relative;
+top:10px;
+margin: auto;
+
+border: 3px solid #000000;
+padding: 10px;
+margin-bottom: 250px;
+
+}
+
+a, p {
+  text-decoration: none;
+  color: white;
+}
+
+.textbox {
+  height:2.5em;
+  width:20em;
+  font-size:16px;
+  position:relative;
+}
+
+input{
+ text-align:center;
+}
+
+.user_search {
+  margin-left: 65%;
+}
+
+
+.button {
+  height:2.5em;
+  width:8.5em;
+  border-radius: 30px;
+  background-color:#00008b;
+  border:none;
+  color:white;
+  font-size:16px;
+}
+
+.user_page_tray {
+  width: calc(32% - 0.1em);
+  background-color: #000000;
+  color:#ffffff;
+}
+
+.black_button {
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  align-content: center;
+}
+
+.menu_align {
+    display: flex;
+}
+
+.menu_border {
+  border-bottom: solid 2px #20505b;
+}
+
+
+#chat {
+  width:100%;
+  display: inline-block;
+}
+
+#friend_list {
+width:10em;
+float:left;
+display:inline-block;
+margin-left:0.5%;
+margin-top: 2em;
+border: solid 1px #ffffff;
+}
+
+.friend_button {
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  width: 100%;
+  height: 2em;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  display: flex;
+  align-content: center;
+  margin-bottom:-1em;
+border: solid 1px #ffffff;
+}
+.friend_button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+
+#messages_box{
+  width: calc(89% - 9em);
+  height:calc(85% - 5em);
+  margin-right:3%;
+  margin-top:2em;
+  max-height:calc(85% - 5em);
+  background-color: #101010;
+  border: solid 3px white;
+  display:inline-block;
+  position: fixed;
+  overflow-y: scroll;
+}
+
+#messages_box h2 {
+  text-align: center;
+}
+
+
+.text_message {
+  font-size:16px;
+  width:80%;
+  left: 50%;
+  transform: translate(-57%);
+  height: 5%;
+  margin-left: 5%;
+  position: fixed;
+  bottom:2em;
+  display: inline-block;
+}
+
+
+.text_message_submit {
+  font-size:16px;
+  width:7%;
+  height:5%;
+  position: fixed;
+  bottom:2em;
+  right:2.3em;
+  display: inline-block;
+
+}
+.chat_friend_title {
+
+}
+
+.friend_message {
+  margin-left: 1em;
+  max-width: 50%;
+}
+
+.user_message {
+  text-align: right;
+
+}
+
+.rotate_logo{
+        animation: rotation 1s infinite linear;
+}
+
+
+.todo {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 300px);
+  margin-left: 17em;
+  margin-top: 10px;
+  grid-row-gap: 20px;
+}
+
+.delete {
+  margin-top: 15px;
+  margin-left: 3em;
+}
+
+
+
+@keyframes rotation {
+        from {
+                transform: rotate(0deg);
+        }
+        to {
+                transform: rotate(359deg);
+        }
+}
+
+@media screen and (max-width: 980px) {
+.login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align:center;
+
+  }
+
+
+}
+

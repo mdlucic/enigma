@@ -1,0 +1,78 @@
+<?php
+include_once('../../resources/html/header.php');
+include_once('../../config/database.php');
+session_start();
+
+
+
+$sql = 'SELECT id, username FROM user_profile WHERE id = :id';
+$stmt = new DBconn;
+
+$db = $stmt->connect()->prepare($sql);
+$db->bindParam(':id', $user_profile_id);
+$db->execute();
+$row = $db->fetchAll(PDO::FETCH_ASSOC);
+echo "<p>" . $row[0]['username'] . "</p>";
+if ($_SESSION['username'] == $row[0]['username']) {
+?>
+    <form method="post" action="" style="display:inline;">
+        <input type="submit" name="posts" class="button" style="font-size:16px;" value="Posts">
+        <input type="submit" name="posts" class="button" style="font-size:16px;" value="Friends">
+    </form>
+
+    <form method="post" action="" style="display:inline;">
+        <button type="submit" name="request_list" class="button" style="font-size:16px;" value="<?php echo $username ?>">Friend Requests</button>
+    </form>
+
+<?php
+    if (isset ($_POST['request_list']))
+    {
+        $sql = "SELECT friend_one FROM friendship_requests WHERE friend_two = :friend_two";
+        $db->bindParam(':friend_two', $_SESSION['username']);
+        $db = $stmt->connect()->prepare($sql);
+        $db->execute();
+        $request_row = $db->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($request_row as $friend_row)
+        {
+            $possible_friend = $friend_row['friend_one'];
+            ?>
+            <form method="post" action="" style="display:inline;">
+            <button type="submit" name="accept_friend" class="button" style="font-size:16px;" value="<?php echo $username ?>">Friend Requests</button>
+
+            </form>
+
+        }
+
+    }
+
+}
+
+if (!$_SESSION['username'] || $_SESSION['username'] == "") {
+    echo "<p>" . $username . "</p>";
+} elseif ($_SESSION['username'] != $row[0]['username']) {
+
+
+
+?>
+
+    <h3><?php echo $username; ?> </h3>
+    <form method="post" action="" style="display:inline;">
+        <input type="submit" name="posts" class="button" style="font-size:16px;" value="Posts">
+        <input type="submit" name="posts" class="button" style="font-size:16px;" value="Friends">
+    </form>
+
+    <form method="post" action="../../src/model/friend_request_validation.php" style="display:inline;">
+        <button type="submit" name="friend_request" class="button" style="font-size:16px;" value="<?php echo $username ?>">Add Friend</button>
+
+    </form>
+
+                  
+} 
+?>
+         -->
+
+    </div>
+#<?php
+#}
+#?>
